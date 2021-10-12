@@ -116,7 +116,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
+                <a href="{{asset('attendants.attendant')}}" class="nav-link">
                     <i class="far fa-address-book"></i>
                     <p>Attendants</p>
                 </a>
