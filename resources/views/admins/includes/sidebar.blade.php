@@ -39,7 +39,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="fas fa-users"></i>
                     <p>
                         TEACHER
@@ -56,13 +56,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="pages/layout/top-nav.html" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Students Item</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/layout/top-nav.html" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Parents Item</p>
                         </a>
@@ -79,13 +79,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="pages/charts/chartjs.html" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Subject</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/charts/flot.html" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Faculty</p>
                         </a>
@@ -103,27 +103,27 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="pages/UI/general.html" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Room item</p>
                         </a>
                     </li>
                 </ul>
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="fas fa-poll"></i>
                     <p>Survey</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="far fa-address-book"></i>
                     <p>Attendants</p>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="fas fa-retweet"></i>
                     <p>
                         Reports
