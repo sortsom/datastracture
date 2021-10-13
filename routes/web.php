@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => []], function () {
+    Route::resource('teachers', TeacherController::class);
+    Route::resource('students', StudentController::class);
+});
 
