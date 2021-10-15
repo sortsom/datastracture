@@ -26,9 +26,7 @@
             <li class="nav-item">
                 <a href="{{ route('admin.teachers.index') }}" class="nav-link">
                     <i class="fas fa-users"></i>
-                    <p>
-                        TEACHER
-                    </p>
+                    <p>TEACHER</p>
                 </a>
             </li>
             <li class="nav-item">
@@ -64,13 +62,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.faculty.subject')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Subject</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('admin.faculty.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Faculty</p>
                         </a>
@@ -88,7 +86,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.faculty.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Room item</p>
                         </a>

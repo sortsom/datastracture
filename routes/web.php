@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\ClassController;
+use App\Http\Controllers\Admin\FacultyController;
 use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Models\FacultyControll;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,5 +31,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => []], function () {
     Route::resource('teachers', TeacherController::class);
     Route::resource('students', StudentController::class);
+    Route::resource('faculty', FacultyController::class);
+    Route::resource('classes', ClassController::class);
+    Route::resource('subjects',SubjectController::class);
 });
 
