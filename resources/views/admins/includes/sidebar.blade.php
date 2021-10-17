@@ -7,7 +7,7 @@
             <img src="{{asset('admin/dist/img/logo.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-            <a href="#" class="d-block"> {{ Auth::user()->name }}</a>
+            <a href="#" class="d-block"> {{Auth::user()->name}}</a>
         </div>
     </div>
 
@@ -18,13 +18,11 @@
             <li class="nav-item menu-open">
                 <a href="#" class="nav-link ">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
-                    <p>
-                        Dashboard
-                    </p>
+                    <p>Dashboard</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.teachers.index') }}" class="nav-link">
+                <a href="{{ route('admin.teacherinfo.index') }}" class="nav-link">
                     <i class="fas fa-users"></i>
                     <p>TEACHER</p>
                 </a>
@@ -32,10 +30,7 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-users"></i>
-                    <p>
-                        STUDENTS
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
+                    <p>STUDENTS<i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
@@ -55,14 +50,11 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-book-reader"></i>
-                    <p>
-                        Faculty
-                        <i class="right fas fa-angle-left"></i>
-                    </p>
+                    <p>Faculty<i class="right fas fa-angle-left"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('admin.faculty.subject')}}" class="nav-link">
+                        <a href="{{route('admin.subjects.index')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Subject</p>
                         </a>
@@ -79,14 +71,11 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-id-card-alt"></i>
-                    <p>
-                        Room
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
+                    <p>Room<i class="fas fa-angle-left right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('admin.faculty.index') }}" class="nav-link">
+                        <a href="{{route('admin.classes.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Room item</p>
                         </a>
@@ -108,9 +97,7 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-retweet"></i>
-                    <p>
-                        Reports
-                    </p>
+                    <p>Reports</p>
                 </a>
             </li>
             <li class="nav-item">
