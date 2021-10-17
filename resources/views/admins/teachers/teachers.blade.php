@@ -96,6 +96,15 @@
                                         <label class="custom-file-label" for="inputGroupFile01">ជ្រើសរើសរូបភាព</label>
                                     </div>
                                 </div>
+                                <div class="input-group input-group-xl mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">រូបភាពQR</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">ជ្រើសរើសរូបភាពQR</label>
+                                    </div>
+                                </div>
                                 <hr>
                                 <div class="input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">
