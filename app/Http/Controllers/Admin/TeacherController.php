@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Teacher;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class TeacherController extends Controller
 {
@@ -23,11 +26,30 @@ class TeacherController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|RedirectResponse|Redirector
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+
+        Teacher::create([
+
+//            'fnamek'=>$request['fnamek'],
+            'lnamek'=>$request['lnamek'],
+            'funamek'=>$request['funamek'],
+            'nameE'=>$request['nameE'],
+            'dname'=>$request['dname'],
+            'phone'=>$request['phone'],
+            'gender'=>$request['gender'],
+            'email'=>$request['email'],
+            'db'=>$request['db'],
+            'image'=>$request['image'],
+            'role'=>$request['role'],
+
+        ]);
+        return redirect()-route('/welcome');
+
+
     }
 
     /**
