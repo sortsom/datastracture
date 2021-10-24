@@ -22,10 +22,24 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('admin.teacherinfo.index') }}" class="nav-link">
+                <a href="#" class="nav-link">
                     <i class="fas fa-users"></i>
                     <p>TEACHER</p>
                 </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('admin.teachers.create') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>New Teacher</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.teachers.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>All Teachers</p>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">

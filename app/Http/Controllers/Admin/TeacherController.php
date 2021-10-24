@@ -20,7 +20,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('admins.teachers.teachers');
+        $teachers = Teacher::all();
+        return view('admins.teachers.index', ['teachers' => $teachers]);
     }
 
     /**
@@ -28,83 +29,99 @@ class TeacherController extends Controller
      *
      * @return Application|RedirectResponse|Redirector
      */
-    public function create(Request $request)
+    public function create()
     {
-        //
-
-        Teacher::create([
-
-//            'fnamek'=>$request['fnamek'],
-            'lnamek'=>$request['lnamek'],
-            'funamek'=>$request['funamek'],
-            'nameE'=>$request['nameE'],
-            'dname'=>$request['dname'],
-            'phone'=>$request['phone'],
-            'gender'=>$request['gender'],
-            'email'=>$request['email'],
-            'db'=>$request['db'],
-            'image'=>$request['image'],
-            'role'=>$request['role'],
-
-        ]);
-        return redirect()-route('/welcome');
-
-
+        return view('admins.teachers.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+
+        Teacher::create([
+            'fnamek' => $request['fnamek'],
+            'lnamek' => $request['lnamek'],
+            'funamek' => $request['funamek'],
+            'nameE' => $request['nameE'],
+            'dname' => $request['dname'],
+            'phone' => $request['phone'],
+            'gender' => $request['gender'],
+            'email' => $request['email'],
+            'db' => $request['db'],
+            'image' => $request['image'],
+            'role' => $request['role'],
+        ]);
+
+        return redirect()->route('admin.teachers.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $teacher = Teacher::findOrFail($id);
+        return view('admins.teachers.show', ['teacher' => $teacher]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $teacher = Teacher::findOrFail($id);
+        return view('admins.teachers.edit', ['teacher' => $teacher]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $teacher = Teacher::findOrFail($id);
+
+        $teacher->update([
+            'fnamek' => $request['fnamek'],
+            'lnamek' => $request['lnamek'],
+            'funamek' => $request['funamek'],
+            'nameE' => $request['nameE'],
+            'dname' => $request['dname'],
+            'phone' => $request['phone'],
+            'gender' => $request['gender'],
+            'email' => $request['email'],
+            'db' => $request['db'],
+            'image' => $request['image'],
+            'role' => $request['role'],
+        ]);
+        return redirect()->route('admin.teachers.index');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $teacher = Teacher::findOrFail($id);
+        $teacher->delete();
+        return redirect()->route('admin.teachers.index');
     }
 }

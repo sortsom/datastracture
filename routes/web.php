@@ -35,7 +35,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => []], functi
     Route::resource('faculty', FacultyController::class);
     Route::resource('classes', ClassController::class);
     Route::resource('subjects',SubjectController::class);
-    Route::resource('searchteachers',SearchteacherController::class);
-    Route::resource('teacherinfo', TeacherinfoController::class);
 });
 
